@@ -1,0 +1,253 @@
+.login-page {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    box-sizing: border-box;
+    background: #111111;
+}
+
+
+/* =========================
+   CARD
+========================= */
+
+.login-card {
+    width: 100%;
+    max-width: 440px;
+    padding: 36px;
+    box-sizing: border-box;
+    background: #211e32;
+    border: 1px solid #373345;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    animation: loginCardEnter 0.4s ease;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.login-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.login-logo-mark {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: #ff742d;
+    border-radius: 10px;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.login-label {
+    margin: 0 0 8px;
+    color: #ff742d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.login-header h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.login-header > p:last-child {
+    margin: 9px 0 0;
+    color: #aaa6b5;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    margin-top: 28px;
+}
+
+
+/* =========================
+   OPTIONS
+========================= */
+
+.login-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.login-forgot-link {
+    color: #ff742d;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-forgot-link:hover {
+    color: #ff8a50;
+}
+
+
+/* =========================
+   DEMO
+========================= */
+
+.login-demo {
+    margin-top: 22px;
+    padding: 15px 17px;
+    background: #181621;
+    border: 1px solid #373345;
+    border-radius: 10px;
+}
+
+.login-demo-header {
+    margin-bottom: 9px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.login-demo p {
+    margin: 5px 0;
+    color: #aaa6b5;
+    font-size: 11px;
+}
+
+.login-demo strong {
+    margin-left: 5px;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+
+/* =========================
+   REGISTER
+========================= */
+
+.login-register {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid #373345;
+    font-size: 13px;
+}
+
+.login-register span {
+    color: #aaa6b5;
+}
+
+.login-register a {
+    color: #ff742d;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-register a:hover {
+    color: #ff8a50;
+}
+
+
+/* =========================
+   LOADING
+========================= */
+
+.login-loading {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: #111111;
+}
+
+.login-loading p {
+    margin: 0;
+    color: #aaa6b5;
+    font-size: 14px;
+}
+
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes loginCardEnter {
+
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 480px) {
+
+    .login-page {
+        padding: 16px;
+    }
+
+    .login-card {
+        padding: 25px 20px;
+        border-radius: 13px;
+    }
+
+    .login-header h1 {
+        font-size: 25px;
+    }
+
+    .login-header > p:last-child {
+        font-size: 13px;
+    }
+
+    .login-options {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .login-register {
+        flex-direction: column;
+        gap: 7px;
+    }
+}

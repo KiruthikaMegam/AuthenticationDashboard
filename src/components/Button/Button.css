@@ -1,0 +1,96 @@
+.common-button {
+    min-height: 46px;
+
+    padding: 0 22px;
+
+    border: none;
+    border-radius: 9px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.common-button.primary {
+    background: #ff742d;
+    color: #ffffff;
+}
+
+.common-button.primary:hover {
+    background: #ff6820;
+    transform: translateY(-1px);
+}
+
+.common-button.secondary {
+    background: #302c42;
+    color: #ffffff;
+    border: 1px solid #555263;
+}
+
+.common-button.secondary:hover {
+    border-color: #ff742d;
+}
+
+.common-button.danger {
+    background: #ff6b6b;
+    color: #ffffff;
+}
+
+.common-button.danger:hover {
+    opacity: 0.9;
+}
+
+.common-button.outline {
+    background: transparent;
+    color: #ff742d;
+    border: 1px solid #ff742d;
+}
+
+.common-button.outline:hover {
+    background: #ff742d;
+    color: #ffffff;
+}
+
+.common-button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.button-spinner {
+    width: 14px;
+    height: 14px;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation: buttonSpin 0.7s linear infinite;
+}
+
+@keyframes buttonSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .common-button {
+        width: 100%;
+    }
+
+}

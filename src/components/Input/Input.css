@@ -1,0 +1,76 @@
+.common-input-group {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.common-input-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d4d0dc;
+
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.required-star {
+    color: #ff742d;
+    margin-left: 3px;
+}
+
+.common-input {
+    width: 100%;
+    height: 46px;
+
+    box-sizing: border-box;
+
+    padding: 0 14px;
+
+    background: #181624;
+
+    border: 1px solid #555263;
+    border-radius: 9px;
+
+    outline: none;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.common-input::placeholder {
+    color: #686474;
+}
+
+.common-input:focus {
+    border-color: #ff742d;
+
+    box-shadow:
+        0 0 0 3px rgba(255, 116, 45, 0.08);
+}
+
+.common-input:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.common-input.input-error {
+    border-color: #ff6b6b;
+}
+
+.input-error-text {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #ff6b6b;
+
+    font-size: 10px;
+
+    line-height: 1.4;
+}

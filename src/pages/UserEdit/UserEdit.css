@@ -1,0 +1,224 @@
+.user-edit-page {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.user-edit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.user-edit-header p {
+    margin: 0 0 7px;
+    color: #ff742d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.user-edit-header h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 32px;
+}
+
+.user-edit-header span {
+    display: block;
+    margin-top: 7px;
+    color: #aaa6b5;
+    font-size: 14px;
+}
+
+.user-edit-header > button,
+.user-edit-not-found button {
+    min-height: 44px;
+    padding: 0 16px;
+
+    border: 1px solid #373345;
+    border-radius: 10px;
+
+    background: #211e32;
+    color: #ffffff;
+
+    cursor: pointer;
+}
+
+.user-edit-header > button:hover,
+.user-edit-not-found button:hover {
+    border-color: #ff742d;
+}
+
+.user-edit-card {
+    background: #211e32;
+    border: 1px solid #373345;
+    border-radius: 18px;
+    padding: 25px;
+}
+
+.edit-section {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #373345;
+}
+
+.edit-section:last-of-type {
+    border-bottom: 0;
+}
+
+.edit-section h2 {
+    margin: 0 0 18px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+.edit-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.edit-group {
+    flex: 1 1 45%;
+    min-width: 280px;
+}
+
+.edit-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #aaa6b5;
+    font-size: 12px;
+}
+
+.edit-group input,
+.edit-group select {
+    width: 100%;
+    min-height: 46px;
+    box-sizing: border-box;
+
+    border: 1px solid #373345;
+    outline: none;
+
+    border-radius: 10px;
+
+    background: #171522;
+    color: #ffffff;
+
+    padding: 0 13px;
+    font-size: 13px;
+}
+
+.edit-group input:focus,
+.edit-group select:focus {
+    border-color: #ff742d;
+    box-shadow: 0 0 0 2px rgba(255, 116, 45, 0.08);
+}
+
+.edit-password {
+    display: flex;
+    gap: 8px;
+}
+
+.edit-password input {
+    flex: 1;
+}
+
+.edit-password button {
+    border: 1px solid #373345;
+    background: #302d42;
+    color: #ffffff;
+    border-radius: 9px;
+    padding: 0 14px;
+    cursor: pointer;
+}
+
+.edit-checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.edit-checkboxes label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    color: #aaa6b5;
+    font-size: 13px;
+}
+
+.edit-checkboxes input {
+    accent-color: #ff742d;
+}
+
+.edit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.edit-actions button {
+    min-height: 44px;
+    padding: 0 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.edit-actions button:first-child {
+    border: 1px solid #373345;
+    background: transparent;
+    color: #aaa6b5;
+}
+
+.edit-actions button:last-child {
+    border: 0;
+    background: #ff742d;
+    color: #ffffff;
+}
+
+.edit-actions button:last-child:hover {
+    background: #ff8a4d;
+}
+
+.user-edit-not-found {
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.user-edit-not-found h2 {
+    color: #ffffff;
+}
+
+@media (max-width: 700px) {
+
+    .user-edit-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .user-edit-header > button {
+        width: 100%;
+    }
+
+    .edit-group {
+        flex-basis: 100%;
+        min-width: 0;
+    }
+
+    .user-edit-card {
+        padding: 18px;
+    }
+
+    .edit-actions {
+        flex-direction: column-reverse;
+    }
+
+    .edit-actions button {
+        width: 100%;
+    }
+}

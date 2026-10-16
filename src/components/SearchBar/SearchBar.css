@@ -1,0 +1,211 @@
+/* =========================================
+   SEARCH BAR
+========================================= */
+
+.search-bar {
+    width: 100%;
+    max-width: 420px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    background: #211e32;
+    border: 1px solid #373345;
+    border-radius: 10px;
+
+    padding: 0 12px;
+
+    box-sizing: border-box;
+
+    transition:
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+/* =========================================
+   SEARCH BAR FOCUS
+   Only ONE border
+========================================= */
+
+.search-bar:focus-within {
+    border: 1px solid #ff742d;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(255, 116, 45, 0.08);
+}
+
+
+/* =========================================
+   SEARCH ICON
+========================================= */
+
+.search-bar-icon {
+    width: 24px;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    color: #aaa6b5;
+    font-size: 22px;
+    line-height: 1;
+
+    margin-right: 8px;
+
+    user-select: none;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.search-bar input {
+    flex: 1;
+
+    width: 100%;
+    min-width: 0;
+
+    height: 100%;
+
+    border: none !important;
+    outline: none !important;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-family: inherit;
+
+    padding: 0;
+
+    box-shadow: none !important;
+
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+
+/* =========================================
+   INPUT FOCUS
+   Prevent second border
+========================================= */
+
+.search-bar input:focus,
+.search-bar input:focus-visible,
+.search-bar input:active {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+
+/* =========================================
+   PLACEHOLDER
+========================================= */
+
+.search-bar input::placeholder {
+    color: #777285;
+    opacity: 1;
+}
+
+
+/* =========================================
+   CLEAR BUTTON
+========================================= */
+
+.search-bar-clear {
+    width: 26px;
+    height: 26px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #aaa6b5;
+
+    font-size: 20px;
+    line-height: 1;
+
+    padding: 0;
+    margin-left: 6px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        background 0.2s ease;
+}
+
+.search-bar-clear:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.search-bar-clear:focus,
+.search-bar-clear:focus-visible {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .search-bar {
+        max-width: 100%;
+        height: 44px;
+    }
+
+    .search-bar-icon {
+        font-size: 20px;
+    }
+
+    .search-bar input {
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .search-bar {
+        height: 42px;
+        padding: 0 10px;
+    }
+
+    .search-bar-icon {
+        width: 22px;
+        height: 22px;
+        font-size: 19px;
+        margin-right: 6px;
+    }
+
+    .search-bar input {
+        font-size: 13px;
+    }
+
+    .search-bar-clear {
+        width: 24px;
+        height: 24px;
+        font-size: 18px;
+    }
+}

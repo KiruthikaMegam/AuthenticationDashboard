@@ -1,0 +1,38 @@
+.common-loader {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    color: #aaa6b5;
+}
+
+.loader-circle {
+    width: 32px;
+    height: 32px;
+
+    border: 3px solid #3a354b;
+    border-top-color: #ff742d;
+
+    border-radius: 50%;
+
+    animation:
+        loaderRotate 0.8s linear infinite;
+}
+
+.loader-text {
+    font-size: 12px;
+}
+
+@keyframes loaderRotate {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}

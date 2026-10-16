@@ -1,0 +1,123 @@
+.confirm-content {
+    text-align: center;
+}
+
+.confirm-icon {
+    width: 48px;
+    height: 48px;
+
+    margin: 2px auto 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ff742d;
+
+    color: #ffffff;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.confirm-content p {
+    margin: 0 auto;
+
+    max-width: 330px;
+
+    color: #aaa6b5;
+
+    font-size: 12px;
+
+    line-height: 1.6;
+}
+
+.confirm-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+}
+
+.confirm-cancel,
+.confirm-button {
+    min-width: 105px;
+    height: 40px;
+
+    padding: 0 16px;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+.confirm-cancel {
+    background: #302c42;
+
+    border: 1px solid #555263;
+
+    color: #ffffff;
+}
+
+.confirm-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    background: #ff742d;
+
+    border: none;
+
+    color: #ffffff;
+}
+
+.confirm-button:disabled,
+.confirm-cancel:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+}
+
+.confirm-spinner {
+    width: 12px;
+    height: 12px;
+
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-top-color: #ffffff;
+
+    border-radius: 50%;
+
+    animation:
+        confirmSpin 0.7s linear infinite;
+}
+
+@keyframes confirmSpin {
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .confirm-actions {
+        flex-direction: column;
+    }
+
+    .confirm-cancel,
+    .confirm-button {
+        width: 100%;
+    }
+
+}

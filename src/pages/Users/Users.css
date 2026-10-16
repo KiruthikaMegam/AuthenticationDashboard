@@ -1,0 +1,715 @@
+.users-page {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.users-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.users-small-title {
+    margin: 0 0 8px;
+    color: #ff742d;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.users-page-header h1 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 34px;
+    font-weight: 700;
+}
+
+.users-page-header p:last-child {
+    margin: 8px 0 0;
+    color: #aaa6b5;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   ADD USER BUTTON
+========================= */
+
+.users-add-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 48px;
+    padding: 0 20px;
+
+    border: none;
+    outline: none;
+    border-radius: 12px;
+
+    background: #ff742d;
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.users-add-button span {
+    font-size: 22px;
+    line-height: 1;
+}
+
+.users-add-button:hover {
+    background: #ff8a4d;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(255, 116, 45, 0.22);
+}
+
+.users-add-button:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 3px;
+}
+
+/* =========================
+   SUMMARY CARDS
+========================= */
+
+.users-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.users-summary-card {
+    flex: 1 1 200px;
+    min-width: 180px;
+    box-sizing: border-box;
+
+    padding: 18px 20px;
+
+    background: #211e32;
+    border: 1px solid #373345;
+    border-radius: 16px;
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.users-summary-card:hover {
+    transform: translateY(-3px);
+    border-color: #ff742d;
+}
+
+.users-summary-card span {
+    display: block;
+    margin-bottom: 8px;
+
+    color: #aaa6b5;
+    font-size: 13px;
+}
+
+.users-summary-card strong {
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* =========================
+   SEARCH TOOLBAR
+========================= */
+
+.users-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    padding: 14px 16px;
+    margin-bottom: 22px;
+
+    background: #211e32;
+    border: 1px solid #373345;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+.users-search {
+    flex: 1;
+    min-width: 0;
+}
+
+.users-result-count {
+    color: #aaa6b5;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.users-result-count strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* =========================
+   USER CARD GRID
+   DESKTOP: 3 CARDS PER ROW
+========================= */
+
+.users-card-list {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+    align-items: stretch;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* =========================
+   INDIVIDUAL USER CARD
+========================= */
+
+.user-card {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    padding: 20px;
+
+    background: #211e32;
+    border: 1px solid #373345;
+    border-radius: 18px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.user-card:hover {
+    transform: translateY(-4px);
+    border-color: #555263;
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   CARD TOP / USER IDENTITY
+========================= */
+
+.user-card-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.user-card-identity {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    flex: 1;
+    min-width: 0;
+}
+
+.user-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    background: #ff742d;
+    color: #ffffff;
+
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.user-card-identity > div:last-child {
+    flex: 1;
+    min-width: 0;
+}
+
+.user-card-identity h2 {
+    margin: 0;
+
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-card-identity p {
+    margin: 5px 0 0;
+
+    color: #aaa6b5;
+    font-size: 12px;
+
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   USER STATUS BADGE
+========================= */
+
+.user-badge {
+    flex-shrink: 0;
+
+    padding: 5px 10px;
+    border-radius: 20px;
+
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.user-badge.active {
+    background: rgba(61, 214, 140, 0.12);
+    color: #4de09b;
+}
+
+.user-badge.inactive {
+    background: rgba(255, 107, 107, 0.12);
+    color: #ff7777;
+}
+
+/* =========================
+   ROLE AND ACCOUNT TYPE
+========================= */
+
+.user-card-role-row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    margin-top: 16px;
+}
+
+.user-role {
+    padding: 5px 9px;
+    border-radius: 7px;
+
+    background: rgba(255, 116, 45, 0.12);
+    color: #ff8c52;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.user-account-type {
+    padding: 5px 9px;
+    border-radius: 7px;
+
+    background: #302d42;
+    color: #aaa6b5;
+
+    font-size: 11px;
+}
+
+/* =========================
+   USER DETAILS
+========================= */
+
+.user-card-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1px;
+
+    margin-top: 18px;
+
+    border-top: 1px solid #373345;
+    border-bottom: 1px solid #373345;
+}
+
+.user-detail {
+    flex: 1 1 45%;
+    min-width: 0;
+    box-sizing: border-box;
+
+    padding: 12px 5px;
+}
+
+.user-detail span {
+    display: block;
+    margin-bottom: 5px;
+
+    color: #777386;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.user-detail strong {
+    display: block;
+
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* =========================
+   DETAIL TEXT COLORS
+========================= */
+
+.text-success {
+    color: #4de09b !important;
+}
+
+.text-danger {
+    color: #ff7777 !important;
+}
+
+.text-muted {
+    color: #aaa6b5 !important;
+}
+
+/* =========================
+   PASSWORD SECTION
+========================= */
+
+.user-password-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 14px 0;
+
+    border-bottom: 1px solid #373345;
+}
+
+.user-password-row div {
+    min-width: 0;
+}
+
+.user-password-row div > span {
+    display: block;
+
+    color: #777386;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.user-password-row strong {
+    display: block;
+    margin-top: 4px;
+
+    color: #ffffff;
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.password-note {
+    flex-shrink: 0;
+
+    color: #aaa6b5;
+    font-size: 10px;
+}
+
+/* =========================
+   LAST LOGIN
+========================= */
+
+.user-last-login {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 15px;
+
+    padding: 13px 0;
+}
+
+.user-last-login span {
+    color: #777386;
+    font-size: 11px;
+}
+
+.user-last-login strong {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: right;
+    overflow-wrap: anywhere;
+}
+
+/* =========================
+   CARD ACTION BUTTONS
+========================= */
+
+.user-card-actions {
+    display: flex;
+    gap: 8px;
+
+    margin-top: auto;
+    padding-top: 5px;
+}
+
+.user-action {
+    flex: 1;
+    min-width: 0;
+    min-height: 38px;
+
+    padding: 8px 5px;
+
+    border-radius: 9px;
+    box-sizing: border-box;
+
+    cursor: pointer;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.user-action:hover {
+    transform: translateY(-1px);
+}
+
+.user-action:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 2px;
+}
+
+.user-action.view {
+    border: 1px solid #373345;
+    background: #302d42;
+    color: #ffffff;
+}
+
+.user-action.view:hover {
+    background: #3a364d;
+}
+
+.user-action.edit {
+    border: 1px solid rgba(255, 116, 45, 0.3);
+    background: rgba(255, 116, 45, 0.1);
+    color: #ff8c52;
+}
+
+.user-action.edit:hover {
+    background: rgba(255, 116, 45, 0.18);
+}
+
+.user-action.delete {
+    border: 1px solid rgba(255, 107, 107, 0.2);
+    background: rgba(255, 107, 107, 0.08);
+    color: #ff7777;
+}
+
+.user-action.delete:hover {
+    background: rgba(255, 107, 107, 0.16);
+}
+
+/* =========================
+   EMPTY STATE
+========================= */
+
+.users-empty {
+    padding: 50px 20px;
+
+    background: #211e32;
+    border: 1px solid #373345;
+    border-radius: 18px;
+
+    box-sizing: border-box;
+}
+
+/* =========================
+   TABLET: 2 CARDS PER ROW
+========================= */
+
+@media (max-width: 1100px) {
+    .users-card-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .user-card {
+        padding: 18px;
+    }
+}
+
+/* =========================
+   SMALL TABLET / MOBILE
+========================= */
+
+@media (max-width: 700px) {
+    .users-page-header {
+        align-items: flex-start;
+    }
+
+    .users-page-header h1 {
+        font-size: 29px;
+    }
+
+    .users-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .users-search {
+        width: 100%;
+    }
+
+    .users-result-count {
+        white-space: normal;
+    }
+
+    .users-summary {
+        gap: 12px;
+    }
+
+    .users-summary-card {
+        flex: 1 1 calc(50% - 12px);
+        min-width: 0;
+    }
+}
+
+/* =========================
+   MOBILE: 1 CARD PER ROW
+========================= */
+
+@media (max-width: 600px) {
+    .users-page-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 16px;
+    }
+
+    .users-add-button {
+        width: 100%;
+    }
+
+    .users-card-list {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
+
+    .user-card {
+        width: 100%;
+        min-width: 0;
+        padding: 16px;
+    }
+
+    .user-card-top {
+        gap: 8px;
+    }
+
+    .user-card-identity {
+        gap: 10px;
+    }
+
+    .user-avatar {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        font-size: 16px;
+    }
+
+    .user-card-identity h2 {
+        font-size: 15px;
+    }
+
+    .user-card-identity p {
+        font-size: 11px;
+    }
+
+    .user-badge {
+        padding: 5px 8px;
+        font-size: 10px;
+    }
+
+    .user-card-actions {
+        gap: 8px;
+    }
+
+    .user-action {
+        flex: 1;
+        min-height: 40px;
+    }
+}
+
+/* =========================
+   EXTRA SMALL MOBILE
+========================= */
+
+@media (max-width: 420px) {
+    .users-summary-card {
+        flex: 1 1 100%;
+    }
+
+    .user-detail {
+        flex: 1 1 100%;
+    }
+
+    .user-last-login {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .user-last-login strong {
+        text-align: left;
+    }
+
+    .user-card-identity h2 {
+        max-width: 170px;
+    }
+}
+
+/* =========================
+   REDUCED MOTION ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .users-add-button,
+    .users-summary-card,
+    .user-card,
+    .user-action {
+        transition: none;
+    }
+
+    .users-add-button:hover,
+    .users-summary-card:hover,
+    .user-card:hover,
+    .user-action:hover {
+        transform: none;
+    }
+}

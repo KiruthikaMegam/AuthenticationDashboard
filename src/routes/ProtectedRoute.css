@@ -1,0 +1,15 @@
+.protected-route-loading {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    background: #111111;
+}
+
+.protected-route-loading p {
+    margin: 0;
+    color: #aaa6b5;
+    font-size: 14px;
+}

@@ -1,0 +1,413 @@
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.dashboard-sidebar {
+    width: 250px;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #17151f;
+    border-right: 1px solid #302d3f;
+
+    box-sizing: border-box;
+
+    transition: transform 0.3s ease;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.sidebar-header {
+    height: 88px;
+
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #302d3f;
+
+    box-sizing: border-box;
+}
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    cursor: pointer;
+}
+
+.sidebar-logo-image {
+    width: 34px;
+    height: 34px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+}
+
+.sidebar-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-logo-name {
+    color: #ffffff;
+
+    font-size: 17px;
+    line-height: 1;
+
+    font-weight: 700;
+}
+
+.sidebar-logo-name span {
+    color: #ff742d;
+}
+
+.sidebar-logo-text small {
+    margin-top: 5px;
+
+    color: #77738a;
+
+    font-size: 8px;
+    letter-spacing: 0.4px;
+}
+
+/* =========================================
+   CLOSE
+========================================= */
+
+.sidebar-close-button {
+    display: none;
+
+    width: 32px;
+    height: 32px;
+
+    align-items: center;
+    justify-content: center;
+
+    background: transparent;
+
+    border: 1px solid #373345;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.sidebar-close-button img {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.sidebar-section {
+    flex: 1;
+
+    padding: 27px 12px 20px;
+
+    overflow-y: auto;
+}
+
+.sidebar-section-title {
+    margin: 0 0 12px;
+
+    padding: 0 12px;
+
+    color: #686474;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.sidebar-navigation {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.sidebar-link {
+    width: 100%;
+    min-height: 48px;
+
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    box-sizing: border-box;
+
+    border-radius: 10px;
+
+    color: #aaa6b5;
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.sidebar-link img {
+    width: 17px;
+    height: 17px;
+
+    object-fit: contain;
+
+    flex-shrink: 0;
+
+    opacity: 0.8;
+}
+
+.sidebar-link:hover {
+    background: rgba(255, 116, 45, 0.07);
+    color: #ffffff;
+}
+
+.sidebar-link:hover img {
+    opacity: 1;
+}
+
+.sidebar-link.active {
+    background: #ff742d;
+    color: #ffffff;
+
+    box-shadow: 0 8px 20px rgba(255, 116, 45, 0.18);
+}
+
+.sidebar-link.active img {
+    opacity: 1;
+}
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.sidebar-bottom {
+    padding: 16px 12px 20px;
+
+    border-top: 1px solid #302d3f;
+}
+
+/* =========================================
+   USER CARD
+========================================= */
+
+.sidebar-user-card {
+    width: 100%;
+
+    min-height: 60px;
+
+    padding: 9px 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    background: #211e32;
+
+    border: 1px solid #373345;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+.sidebar-user-avatar {
+    width: 38px;
+    height: 38px;
+
+    flex: 0 0 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ff742d;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.sidebar-user-details {
+    min-width: 0;
+    flex: 1;
+}
+
+.sidebar-user-details h4 {
+    margin: 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    color: #ffffff;
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.sidebar-user-details p {
+    margin: 4px 0 0;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    color: #77738a;
+
+    font-size: 9px;
+}
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.sidebar-logout {
+    width: 100%;
+
+    min-height: 46px;
+
+    margin-top: 8px;
+
+    padding: 0 15px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    background: transparent;
+
+    border: none;
+    border-radius: 9px;
+
+    color: #aaa6b5;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.sidebar-logout img {
+    width: 17px;
+    height: 17px;
+
+    object-fit: contain;
+
+    opacity: 0.8;
+}
+
+.sidebar-logout:hover {
+    background: rgba(255, 107, 107, 0.08);
+    color: #ff6b6b;
+}
+
+.sidebar-logout:hover img {
+    opacity: 1;
+}
+
+/* =========================================
+   MOBILE OVERLAY
+========================================= */
+
+.sidebar-overlay {
+    display: none;
+}
+
+/* =========================================
+   IMPORTANT DESKTOP LAYOUT FIX
+========================================= */
+
+@media (min-width: 701px) {
+    .dashboard-layout-main {
+        margin-left: 250px;
+        width: calc(100% - 250px);
+        min-width: 0;
+    }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+    .dashboard-sidebar {
+        width: 250px;
+
+        transform: translateX(-100%);
+
+        box-shadow: 15px 0 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .dashboard-sidebar.mobile-open {
+        transform: translateX(0);
+    }
+
+    .sidebar-close-button {
+        display: flex;
+    }
+
+    .sidebar-overlay {
+        display: block;
+
+        position: fixed;
+        inset: 0;
+
+        z-index: 999;
+
+        background: rgba(0, 0, 0, 0.65);
+
+        backdrop-filter: blur(2px);
+    }
+
+    .sidebar-header {
+        height: 75px;
+    }
+
+    .sidebar-section {
+        padding-top: 22px;
+    }
+}

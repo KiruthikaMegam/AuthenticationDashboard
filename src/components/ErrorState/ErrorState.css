@@ -1,0 +1,79 @@
+.error-state {
+    min-height: 230px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+.error-state-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 50%;
+
+    background: #302c42;
+
+    border: 1px solid #ff6b6b;
+
+    color: #ff6b6b;
+
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.error-state h3 {
+    margin-bottom: 7px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+.error-state p {
+    max-width: 350px;
+
+    color: #777383;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+}
+
+.error-retry {
+    margin-top: 17px;
+
+    min-height: 38px;
+
+    padding: 0 18px;
+
+    border: 1px solid #ff742d;
+
+    border-radius: 8px;
+
+    background: transparent;
+
+    color: #ff742d;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+.error-retry:hover {
+    background: #ff742d;
+
+    color: #ffffff;
+}

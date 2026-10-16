@@ -1,0 +1,62 @@
+.form-select-group {
+    width: 100%;
+    margin-bottom: 18px;
+}
+
+.form-select-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #d4d0dc;
+
+    font-size: 12px;
+}
+
+.select-required {
+    color: #ff742d;
+    margin-left: 3px;
+}
+
+.form-select {
+    width: 100%;
+    height: 46px;
+
+    padding: 0 13px;
+
+    border: 1px solid #555263;
+    border-radius: 9px;
+
+    outline: none;
+
+    background: #181624;
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    cursor: pointer;
+}
+
+.form-select:focus {
+    border-color: #ff742d;
+}
+
+.form-select option {
+    background: #211e32;
+    color: #ffffff;
+}
+
+.form-select.select-error {
+    border-color: #ff6b6b;
+}
+
+.select-error-text {
+    display: block;
+
+    margin-top: 5px;
+
+    color: #ff6b6b;
+
+    font-size: 10px;
+}
